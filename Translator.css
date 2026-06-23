@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    width: 250%;
+    height: 100%;
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: animate 10s ease-in-out infinite alternate;
+}
+@keyframes animate{
+    from {
+        transform: translateX(-50%) skew(0deg, -10deg);
+    }
+    to {
+        transform: translateX(-30%) skew(10deg, 0deg);
+    }
+}
+
+.container{
+    width: 690px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 25px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+.wrapper{
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.wrapper .text-input{
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+
+.text-input .to-text{
+    border-radius: 0px;
+    border-left: 1px solid #bbb;
+}
+
+.text-input textarea{
+    height: 250px;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+    border-radius: 5px;
+    padding: 10px 15px;
+    resize: none;
+}
+
+.controls, li, .icons, .icons i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.controls .row.from .icons{
+    padding-right: 15px;
+    border-right: 1px solid transparent;
+}
+
+.controls .row.to .icons{
+    padding-left: 15px;
+    border-left: 1px solid transparent;
+}
+
+.controls .icons i{
+    background: linear-gradient(-135deg, #47aaec, #4b2d57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.controls .row select{
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.controls .exchange{
+    background: linear-gradient(-135deg, #47aaec, #4b2d57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container button{
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    background: linear-gradient(-135deg, #47aaec, #4b2d57);
+}
